@@ -21,7 +21,7 @@ module LogStash; module Outputs; class ElasticSearch;
   #
   # We wound up agreeing that a number greater than 10 MiB and less than 100MiB
   # made sense. We picked one on the lowish side to not use too much heap.
-  TARGET_BULK_BYTES = 20 * 1024 * 1024 # 20MiB
+  TARGET_BULK_BYTES = 10 * 1024 * 1024 # 20MiB
 
   class HttpClient
     attr_reader :client, :options, :logger, :pool, :action_count, :recv_count
